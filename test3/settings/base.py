@@ -14,6 +14,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from django.utils.translation import gettext_lazy as _
 
+import mimetypes 
+mimetypes.init() 
+mimetypes.types_map['.css'] = 'text/css'
+
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
@@ -166,7 +170,9 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static'),
+
+
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

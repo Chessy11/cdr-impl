@@ -6,10 +6,11 @@ from coderedcms import admin_urls as coderedadmin_urls
 from coderedcms import search_urls as coderedsearch_urls
 from coderedcms import urls as codered_urls
 
+
 urlpatterns = [
     # Admin
     path('django-admin/', admin.site.urls),
-    path('admin/', include(coderedadmin_urls)),
+    path('admin/', include(coderedadmin_urls)), 
 
     # Documents
     path('docs/', include(wagtaildocs_urls)),

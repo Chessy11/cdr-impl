@@ -92,3 +92,42 @@ class HomePage(CoderedWebPage):
 
 
 
+class AboutPage(CoderedWebPage):
+    
+    class Meta:
+        verbose_name = "About Page"
+
+    index_query_pagemodel = "website.AboutPage"
+
+    subpage_type = ["website.AboutPage"]
+
+    template = "coderedcms/pages/about_page.html"
+
+
+
+class Services(CoderedWebPage):
+    
+    class Meta:
+        verbose_name = "Services Page"
+
+    index_query_pagemodel = "website.Services"
+
+    subpage_type = ["website.Services"]
+
+    template = "coderedcms/pages/services.html"
+
+
+
+class Contact(CoderedWebPage):
+    
+    class Meta:
+        verbose_name = "Contact Page"
+
+    index_query_pagemodel = "website.Contact"
+
+    subpage_type = ["website.Contact"]
+
+    template = "coderedcms/pages/contact.html"
+
+
+
